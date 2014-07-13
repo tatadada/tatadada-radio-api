@@ -1,5 +1,6 @@
 package com.tatadada.api.frontend;
 
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -9,8 +10,9 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class ChannelController {
 
-    @RequestMapping("/")
-    public String index() {
-        return "Greetings from Spring Boot!";
+    //remember to manage the url like this because the backward compatibility!
+    @RequestMapping("/radio/service/{radioresource}/v1/")
+    public String index(@PathVariable("radioresource") String radioresource) {
+        return "Greetings from Spring Boot! " + radioresource;
     }
 }
