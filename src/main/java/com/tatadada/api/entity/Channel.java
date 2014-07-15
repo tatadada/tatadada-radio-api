@@ -1,4 +1,4 @@
-package com.tatadada.api.model;
+package com.tatadada.api.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -8,7 +8,7 @@ import javax.persistence.Id;
 /**
  * Created by mbogheti on 13/07/14.
  */
-@Entity
+@Entity(name = "radiochannel")
 public class Channel {
 
 

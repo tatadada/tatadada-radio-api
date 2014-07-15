@@ -1,5 +1,6 @@
 package com.tatadada.api.model;
 
+import com.tatadada.api.entity.Channel;
 import org.springframework.data.repository.CrudRepository;
 
 import java.util.List;
