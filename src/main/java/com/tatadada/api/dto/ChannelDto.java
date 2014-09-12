@@ -37,8 +37,8 @@ public class ChannelDto {
         );
     }
 
-    public static Collection<ChannelDto> fromBeanCollection(Collection<Channel> vehicles) {
-        return Collections2.transform(vehicles, new Function<Channel, ChannelDto>() {
+    public static Collection<ChannelDto> fromBeanCollection(Collection<Channel> channels) {
+        return Collections2.transform(channels, new Function<Channel, ChannelDto>() {
             @Override
             public ChannelDto apply(Channel channel) {
                 return fromBean(channel);
