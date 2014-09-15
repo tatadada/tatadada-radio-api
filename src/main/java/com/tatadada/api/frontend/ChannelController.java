@@ -42,7 +42,9 @@ public class ChannelController {
         final List<Channel> byResource = channelservice.findByResource(radioresource);
         final Collection<ChannelDto> channelDtos = ChannelDto.fromBeanCollection(byResource);
 
-        saveStatistic(radioresource, deviceId, userAgent);
+        if(byResource.size()>0) {
+            saveStatistic(radioresource, deviceId, userAgent);
+        }
 
         return channelDtos;
     }
